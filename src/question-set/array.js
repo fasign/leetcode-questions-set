@@ -168,3 +168,21 @@ export var intersect2 = function (nums1, nums2) {
     }
   })
 };
+
+/**
+ * @param {number[]} digits
+ * @return {number[]}
+ */
+export var plusOne = function (digits) {
+  let len = digits.length
+  while(len--) {
+    digits[len] = digits[len] + 1
+    if(digits[len] < 10) {
+      break
+    } else {
+      digits[len] = 0
+    }
+  }
+  !digits[0] && digits.unshift(1)
+  return digits
+};

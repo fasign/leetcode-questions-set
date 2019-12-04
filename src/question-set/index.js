@@ -27,6 +27,9 @@ demo = [1, [8, 5], [6, 4, 8, [8, 3, [5, 9]]]]
 res = arr.intersect2([8, 0, 3], [0, 0])
 appendRes('intersect:', res)
 
+res = arr.plusOne([9,9,9,9,9])
+appendRes('plusOne:', res)
+
 /**
  * dp
  */
