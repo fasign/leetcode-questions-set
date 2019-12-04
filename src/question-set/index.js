@@ -23,7 +23,9 @@ res = arr.rotate([1, 2, 3, 4, 5, 6, 7], 3)
 appendRes('rotate:', res)
 demo = [1, [8, 5], [6, 4, 8, [8, 3, [5, 9]]]]
 // demo = [1, [2, [10, [6, 7], 3, [9], 8, [4, [5]]]]]
-console.log('flat:', arr.flat3(demo))
+
+res = arr.intersect2([8, 0, 3], [0, 0])
+appendRes('intersect:', res)
 
 /**
  * dp

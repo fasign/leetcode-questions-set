@@ -130,8 +130,41 @@ export const flat2 = arr => {
 
 export const flat3 = array => {
   while(array.some(item => Array.isArray(item))) {
-    array = [].concat(...array).2。2
-    console.log(array)
+    array = [].concat(...array)
   }
   return array
 }
+
+/**
+ * @param {number[]} nums1
+ * @param {number[]} nums2
+ * @return {number[]}
+ */
+export var intersect = function (nums1, nums2) {
+  let res = []
+  let len = nums1.length
+  while(len--) {
+    let index = nums2.indexOf(nums1[len])
+    if(index !== -1) {
+      res.push(nums1[len])
+      nums2.splice(index, 1)
+    }
+  }
+  return res
+};
+export var intersect2 = function (nums1, nums2) {
+  let hash = {}
+  nums1.forEach(item => {
+    if(hash[item] === undefined) {
+      hash[item] = 1
+    } else {
+      hash[item]++
+    }
+  })
+  return nums2.filter(item => {
+    if(hash[item]) {
+      hash[item]--
+      return true
+    }
+  })
+};
