@@ -203,3 +203,21 @@ export var moveZeroes = function (nums) {
   }
   return nums
 };
+
+/**
+ * @param {number[]} nums
+ * @param {number} target
+ * @return {number[]}
+ */
+export var twoSum = function (nums, target) {
+  let obj = {}
+  nums.forEach((e, i) => {
+    obj[e] = i
+  })
+  for(let i = 0; i < nums.length; ++i) {
+    let tar = target - nums[i]
+    if(obj[tar] && obj[tar] != i) {
+      return [i, obj[tar]]
+    }
+  }
+};
