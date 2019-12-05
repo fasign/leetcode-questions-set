@@ -186,3 +186,20 @@ export var plusOne = function (digits) {
   !digits[0] && digits.unshift(1)
   return digits
 };
+
+/**
+ * @param {number[]} nums
+ * @return {void} Do not return anything, modify nums in-place instead.
+ */
+export var moveZeroes = function (nums) {
+  let len = nums.length
+  let f = false
+  while(len--) {
+    if(nums[len]) {
+      f = true
+    } else if(f) {
+      nums.push(nums.splice(len, 1))
+    }
+  }
+  return nums
+};

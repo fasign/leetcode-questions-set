@@ -30,6 +30,11 @@ appendRes('intersect:', res)
 res = arr.plusOne([9,9,9,9,9])
 appendRes('plusOne:', res)
 
+res = arr.moveZeroes([0,2,0,5,0,3,4,1,9])
+appendRes('moveZeroes:', res)
+
+
+
 /**
  * dp
  */

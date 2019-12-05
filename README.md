@@ -8,5 +8,5 @@
   - method named with a number as the suffix means multi-solution
 
   ## medium
-  - medium solutios are in the 'medium' folder
+  - medium solutions are in the 'medium' folder
   
