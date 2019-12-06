@@ -221,3 +221,60 @@ export var twoSum = function (nums, target) {
     }
   }
 };
+
+/**
+ * @param {character[][]} board
+ * @return {boolean}
+ */
+export var isValidSudoku = function (board) {
+  let cur = new Set()
+  let size
+  let isRow = true
+  let i, j
+  for(i = 0; i < 9; ++i) {
+    cur.clear()
+    size = 0
+    for(j = 0; j < 9; ++j) {
+      let val = isRow ? board[i][j] : board[j][i]
+      if(val !== '.') {
+        cur.add(val)
+        size++
+      }
+    }
+    if(size !== cur.size) return false
+    if(i === 8 && isRow) {
+      i = -1
+      j = 0
+      isRow = false
+    }
+  }
+  i = j = 0
+  let ii = 0 , jj = 0
+  cur.clear()
+  size = 0
+  for(; ii < 3; ++ii) {
+    for(jj = 0; jj < 3; ++jj) {
+      let val = board[i + ii][j + jj]
+      if(val !== '.') {
+        cur.add(val)
+        size++
+      }
+    }
+    if(ii === 2) {
+      // console.log(size, cur, ii, jj)
+      if(size !== cur.size) return false
+      if(!(i === 6 && j === 6)) {
+        cur.clear()
+        size = 0
+        ii = -1
+        if(j !== 6) {
+          j += 3
+        } else {
+          i += 3
+          j = 0
+        }
+      }
+    }
+  }
+  return true
+};
