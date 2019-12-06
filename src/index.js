@@ -1,4 +1,4 @@
 // import {router} from './provide'
 // import './algor'
-import './question-set'
+import './easy-collection'
 // import './medium'
