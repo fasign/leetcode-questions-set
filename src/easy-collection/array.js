@@ -278,3 +278,22 @@ export var isValidSudoku = function (board) {
   }
   return true
 };
+
+/**
+ * @param {number[][]} matrix
+ * @return {void} Do not return anything, modify matrix in-place instead.
+ */
+export var rotateMatrix = function (matrix) {
+  let len = matrix.length
+  let temp
+  for(let i = 0; i < len; ++i) {
+    for(let j = i; j < len; ++j) {
+      temp = matrix[i][j]
+      matrix[i][j] = matrix[j][i]
+      matrix[j][i] = temp
+    }
+  }
+  for(let i = 0; i < len; ++i) {
+    matrix[i].reverse()
+  }
+}
