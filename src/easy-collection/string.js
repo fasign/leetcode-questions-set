@@ -117,3 +117,37 @@ export var isPalindrome = function (s) {
   }
   return true
 };
+
+/**
+ * @param {string} str
+ * @return {number}
+ */
+export var myAtoi = function (str) {
+  str = str.replace(/^ */, '')
+  if(!str) return 0
+  let len = str.length
+  let i = 1
+  let res = ''
+  if(str[0] === '-'
+    || str[0] === '+'
+    || (str[0].charCodeAt() >= 48
+      && str[0].charCodeAt() <= 57)) {
+      res = str[0]
+    } else {
+      return 0
+    }
+  while(i < len) {
+    if(str[i].charCodeAt() < 48
+      || str[i].charCodeAt() > 57) {
+      break
+    } else {
+      res += str[i]
+    }
+    i++
+  }
+  res = Number(res)
+  if(res !== res) return 0
+  if(res > 2147483647) return 2147483647
+  if(res < -2147483648) return -2147483648
+  return res
+};

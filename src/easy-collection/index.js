@@ -96,6 +96,9 @@ appendRes('isAnagram:', res)
 res = str.isPalindrome('0p')
 appendRes('isPalindrome:', res)
 
+appendRes('isPalindrome:', str.myAtoi('     -10p'))
+
+
 /**
  * Trees
  */
