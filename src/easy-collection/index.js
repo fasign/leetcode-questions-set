@@ -168,3 +168,19 @@ appendDelimiter('linkedList')
 // linkedList.removeNthFromEnd(ListNode, 1)
 
 linkedList.reverseList(ListNode)
+
+let l1 = {
+  val: -9,
+  next: {
+    val: 3,
+    next: null
+  }
+}
+let l2 = {
+  val: 5,
+  next: {
+    val: 7,
+    next: null
+  }
+}
+linkedList.mergeTwoLists(l1, l2)

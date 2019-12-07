@@ -1,3 +1,5 @@
+import {list} from "postcss";
+
 /**
  * Definition for singly-linked list.
  * function ListNode(val) {
@@ -23,25 +25,11 @@ let ListNode = {
   }
 }
 
-let node =  {
-  val: 3,
-  next: {
-    val: 4,
-    next: null
-  }
-}
 export var deleteNode = function (node) {
   node.val = node.next.val
   node.next = node.next.next
 };
 
-/**
- * Definition for singly-linked list.
- * function ListNode(val) {
- *     this.val = val;
- *     this.next = null;
- * }
- */
 /**
  * @param {ListNode} head
  * @param {number} n
@@ -98,3 +86,65 @@ export var reverseList = function (head) {
   head = cur
   return head
 };
+
+/**
+ * Definition for singly-linked list.
+ * function ListNode(val) {
+ *     this.val = val;
+ *     this.next = null;
+ * }
+ */
+let l1 = {
+  val: 1,
+  next: {
+    val: 2,
+    next: {
+      val: 3,
+      next: {
+        val: 4,
+        next: null
+      }
+    }
+  }
+}
+export var mergeTwoLists = function (l1, l2) {
+  if(!l1&&!l2) return l1
+  let l = {
+    val: 'holder',
+    next: null
+  }
+  let cur = l
+  let val
+  while(l1 && l2) {
+    if(l1.val < l2.val) {
+      val = l1.val
+      l1 = l1.next
+    } else {
+      val = l2.val
+      l2 = l2.next
+    }
+    cur.val = val
+    cur.next = {
+      val: 'holder',
+      next: null
+    }
+    cur = cur.next
+  }
+  l1 = l1 || l2
+  while(1) {
+    cur.val = l1.val
+    cur.next = {
+      val: 'holder',
+      next: null
+    }
+    l1 = l1.next
+    if(l1) {
+      cur = cur.next
+    } else {
+      break
+    }
+  }
+  cur.next = null
+  console.log(l)
+  return l
+}
