@@ -184,3 +184,20 @@ let l2 = {
   }
 }
 linkedList.mergeTwoLists(l1, l2)
+
+demo = {
+  val: 1,
+  next: {
+    val: 1,
+    next: {
+      val: 2,
+      next: {
+        val: 1,
+        next: null
+      }
+    }
+  }  
+}
+
+res = linkedList.isPalindrome(demo)
+console.log(res);

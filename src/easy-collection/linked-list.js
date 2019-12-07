@@ -147,3 +147,38 @@ export var mergeTwoLists = function (l1, l2) {
   cur.next = null
   return l
 }
+
+/**
+ * Definition for singly-linked list.
+ * function ListNode(val) {
+ *     this.val = val;
+ *     this.next = null;
+ * }
+ */
+/**
+ * @param {ListNode} head
+ * @return {boolean}
+ */
+export var isPalindrome = function (head) {
+  if(!head) return true
+  let prev = null
+  let cur = head
+  while(1) {
+    cur.prev = prev
+    prev = cur
+    if(cur.next) {
+      cur = cur.next
+    } else {
+      break
+    }
+  }
+  while(1) {
+    if(head.val !== cur.val) return false
+    if(cur === head || !cur.prev || !head.next) {
+      break
+    }
+    head = head.next
+    cur = cur.prev
+  }
+  return true
+};
