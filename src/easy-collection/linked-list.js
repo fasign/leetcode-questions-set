@@ -145,6 +145,5 @@ export var mergeTwoLists = function (l1, l2) {
     }
   }
   cur.next = null
-  console.log(l)
   return l
 }
