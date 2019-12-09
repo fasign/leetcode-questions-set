@@ -151,3 +151,20 @@ export var myAtoi = function (str) {
   if(res < -2147483648) return -2147483648
   return res
 };
+
+/**
+ * @param {string} haystack
+ * @param {string} needle
+ * @return {number}
+ */
+var strStr = function (haystack, needle) {
+  if(!needle) return 0
+  let nlen = needle.length
+  let len = haystack.length - nlen
+  let i = 0
+  let j = 0
+  while(i < len) {
+    
+  }
+  return -1
+};
