@@ -157,14 +157,24 @@ export var myAtoi = function (str) {
  * @param {string} needle
  * @return {number}
  */
-var strStr = function (haystack, needle) {
+export var strStr = function (haystack, needle) {
   if(!needle) return 0
   let nlen = needle.length
-  let len = haystack.length - nlen
+  let len = haystack.length - nlen + 1
   let i = 0
   let j = 0
   while(i < len) {
-    
+    j = 0
+    while(j < nlen) {
+      if(haystack[i + j] !== needle[j]) {
+        break
+      }
+      j++
+    }
+    if(j === nlen) {
+      return i
+    }
+    i++
   }
   return -1
 };

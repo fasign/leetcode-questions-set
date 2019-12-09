@@ -98,6 +98,8 @@ appendRes('isPalindrome:', res)
 
 appendRes('isPalindrome:', str.myAtoi('     -10p'))
 
+appendRes('strStr:', str.strStr('fdsfp', 'dsfp'))
+
 
 /**
  * Trees
@@ -203,4 +205,3 @@ demo = {
 }
 
 res = linkedList.isPalindrome(demo)
-console.log(res);
