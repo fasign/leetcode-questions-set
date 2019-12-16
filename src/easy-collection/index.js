@@ -100,6 +100,8 @@ appendRes('isPalindrome:', str.myAtoi('     -10p'))
 
 appendRes('strStr:', str.strStr('fdsfp', 'dsfp'))
 
+appendRes('countAndSay:', str.countAndSay(5))
+
 
 /**
  * Trees

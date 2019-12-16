@@ -178,3 +178,40 @@ export var strStr = function (haystack, needle) {
   }
   return -1
 };
+
+/**
+ * @param {number} n
+ * @return {string}
+ */
+export var countAndSay = function (n) {
+  if(n === 1) return '1'
+  let base = '1'
+  let res = []
+  for(let i = 0; i < n - 1; ++i) {
+    res = []
+    let len = base.length
+    for(let j = 0; j < len; j++) {
+      if(j === 0 || res[res.length - 1].value !== base[j]) {
+        res.push({
+          value: base[j],
+          times: 1
+        })
+      } else {
+        res[res.length - 1].times++
+      }
+    }
+    base = ''
+    res.forEach(item => {
+      base += item.times + item.value
+    })
+  }
+  return base
+};
+
+/**
+ * @param {string[]} strs
+ * @return {string}
+ */
+var longestCommonPrefix = function (strs) {
+  
+};
