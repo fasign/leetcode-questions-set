@@ -1,3 +1,6 @@
 import * as a from './a'
 
-a.
+let res
+
+res = a.hammingDistance(1, 4)
+console.log(res)
