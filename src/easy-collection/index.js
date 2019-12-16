@@ -102,6 +102,8 @@ appendRes('strStr:', str.strStr('fdsfp', 'dsfp'))
 
 appendRes('countAndSay:', str.countAndSay(5))
 
+appendRes('longestCommonPrefix:', str.longestCommonPrefix(["flower", "flow", "flight"]))
+
 
 /**
  * Trees
@@ -131,15 +133,15 @@ demo = {
   }
 }
 
-res = trees.prevTraversal(demo)
-console.log('prevTraversal:',res)
-res = trees.midTraversal(demo)
-console.log('midTraversal:',res)
-res = trees.postTraversal(demo)
-console.log('midTraversal:',res)
-// 10,5,8,17,15,11,20
-// 5,17,8,10,11,15,20
-// 17,8,5,11,20,15,10
+// res = trees.prevTraversal(demo)
+// console.log('prevTraversal:',res)
+// res = trees.midTraversal(demo)
+// console.log('midTraversal:',res)
+// res = trees.postTraversal(demo)
+// console.log('midTraversal:',res)
+// // 10,5,8,17,15,11,20
+// // 5,17,8,10,11,15,20
+// // 17,8,5,11,20,15,10
 
 /**
  * Sorting

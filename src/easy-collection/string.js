@@ -212,6 +212,18 @@ export var countAndSay = function (n) {
  * @param {string[]} strs
  * @return {string}
  */
-var longestCommonPrefix = function (strs) {
-  
+export var longestCommonPrefix = function (strs) {
+  let index = 0
+  let len = strs.length
+  if(!len) return ''
+  if(len === 1) return strs[0]
+  while (1) {
+    let base = strs[0][index]
+    let sIndex = 1
+    while(sIndex < len) {
+      if(!strs[sIndex][index] || strs[sIndex][index] !== base) return strs[0].substring(0, index)
+      sIndex++
+    }
+    index++
+  }
 };
