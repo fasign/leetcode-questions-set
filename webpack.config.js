@@ -3,6 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const {CleanWebpackPlugin} = require('clean-webpack-plugin')
 const webpack = require('webpack')
 
+// f1 changed
 module.exports = {
   entry: {
     app: './src/index.js'
@@ -39,3 +40,5 @@ module.exports = {
     // new webpack.HotModuleReplacementPlugin()
   ]
 }
+// f2 changed c2
+// f2 c3
